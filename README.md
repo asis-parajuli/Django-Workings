@@ -1,2 +1,2 @@
-# Elearning-Portal-Django-
-This is the Elearning Portal developed using Django.
+# Django Workings
+Multiple projects based on Python high level web framework Django.
