@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% if request.user.is_authenticated %}
+<h1>You are already logged in.</h1>
+{% else %}
+<h1>Login to your account</h1>
+    <div class="row">
+        <div class="col">
+           <p>{{ content }}</p>
+           <div class="col-sm-6 col-12">
+                <form method="POST"> {% csrf_token %}
+                    {{ form }}<br/>
+                    <button type="submit" class="btn btn-primary">Submit</button> 
+                </form>   
+            </div>
+        </div>
+
+    </div>
+{% endif %}
+
+{% endblock %}

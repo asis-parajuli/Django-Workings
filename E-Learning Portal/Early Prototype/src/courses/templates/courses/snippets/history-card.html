@@ -1,0 +1,11 @@
+<div class="col-md-3">
+        <div class="card shadow" style="width: 20rem;">
+            {% if instance.image %}               
+                    <img src="{{ instance.image.url }}" class="card-img-top" alt="{{ instance.title }} logo">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ instance.title }}</h5>
+                <p class="card-text">{{ instance.description|truncatewords:12 }}</p>               
+            </div>
+        </div>
+        </div>

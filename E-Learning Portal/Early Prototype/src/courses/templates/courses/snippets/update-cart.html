@@ -1,0 +1,11 @@
+<form class="form-course-ajax" method="POST" action="{% url 'cart:update' %}" data-endpoint="{% url 'cart:update' %}" class="form"> {% csrf_token %}
+    <input type="hidden" name="course_id" value="{{ course.id }}" />
+    <span class="submit-span">
+        {% if course in cart.courses.all %}
+            <button type="submit" class="btn btn-danger"><i class="fas fa-minus-hexagon"></i>Remove</button>
+        {% else %}
+            <button type="submit" class="btn btn-danger"> <i class="fas fa-shopping-cart"></i> Add to cart </button>          
+        {% endif %}
+    </span>
+
+</form>

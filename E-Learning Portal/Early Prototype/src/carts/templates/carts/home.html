@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<h1>Shopping Cart</h1>
+
+{% if cart.courses.exists %}
+
+    <table class="table cart-table">
+        <thead>
+            <tr>
+            <th scope="col">S.N</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Price</th>            
+            </tr>
+        </thead>
+        <tbody class="cart-body">
+                {% for course in cart.courses.all %}
+                <tr class="cart-course">
+                <th scope="row">{{ forloop.counter }}</th>
+                <td><a href="{{ course.get_absolute_url }}" >{{ course.title }}</a>
+
+                    {% include 'carts/snippets/remove-course.html' with course_id=course.id %}
+                </td>
+                <td>{{ course.price }}</td>
+                </tr>
+                {% endfor %}
+            <tr>
+            <td colspan="2"></th>
+            <td><b>Subtotal</b> Rs.<span class="cart-subtotal">{{ cart.subtotal}}</span></td>
+            </tr>
+            <tr>
+            <td colspan="2"></th>
+            <td><b>Total</b> Rs.<span class="cart-total">{{ cart.total}}</span></td>
+            </tr>
+            <tr>
+                <td colspan="2"></th>
+                <td><a class="btn btn-success" href="{% url 'cart:checkout' %}">Checkout</a></td>
+            </tr>
+        </tbody>
+    </table>
+<br />
+<p>*Note: Rs 10 which is added is for charity which helps to provide educational materials to people of rural areas </p>    
+
+<div class="cart-items-remove-form" style="display:none">
+        {% include 'carts/snippets/remove-course.html' %}
+</div>
+
+
+{% else %}
+    <p class="lead">0 Courses in the Cart</p>
+    <figure class="text-center">
+        <img src="http://icons.iconarchive.com/icons/icons8/windows-8/128/Ecommerce-Shopping-Cart-icon.png" class="figure-img img-fluid rounded" alt="Cart icon">
+        <figcaption class="figure-caption">Your cart is empty. Keep shopping to find a course!</figcaption><br />
+        <a class="btn btn-danger" href="{% url 'home' %}">Keep Shopping</a>
+    </figure>
+{% endif %}
+
+{% endblock %}

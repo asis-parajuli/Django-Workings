@@ -1,0 +1,58 @@
+[
+{
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+        "title": "Python for Data Science",
+        "slug": "python-for-data-science",
+        "description": "Python for Data Science Beginners, Machine Learning, Data Analysis & Visualization, Hand's on NumPy, Pandas & Matplotlib.",
+        "playlist_id": "playlist_id",
+        "price": "250.50",
+        "image": "courses/testing_image_Dw4ZK3L.jpg",
+        "featured": false,
+        "active": true
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+        "title": "Asp.net course",
+        "slug": "asp_net-course",
+        "description": "This is the asp.net course.",
+        "playlist_id": "playlist_id",
+        "price": "2070.78",
+        "image": "",
+        "featured": true,
+        "active": true
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+        "title": "Complete Python Bootcamp",
+        "slug": "complete-python-bootcamp",
+        "description": "Learn Python like a Professional! Start from the basics and go all the way to creating your own applications and games!",
+        "playlist_id": "playlist_id",
+        "price": "107.84",
+        "image": "",
+        "featured": false,
+        "active": true
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 5,
+    "fields": {
+        "title": "Bootstrap Full Course",
+        "slug": "bootstrap-full-course",
+        "description": "Build responsive, mobile-first projects on the web with the world\u2019s most popular front-end component library.\r\nBootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.",
+        "playlist_id": "PLRtjMdoYXLf47brThg9-nTj8HSq8cQ0ND",
+        "price": "207.80",
+        "image": "",
+        "featured": false,
+        "active": true
+    }
+}
+]

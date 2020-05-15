@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Course Viewed History</h1>
+    <hr />
+        <div class="row">            
+            {% for obj in object_list %}
+            <div class="col">
+                {% include 'courses/snippets/history-card.html' with instance=obj.content_object %}
+                {% if forloop.counter|divisibleby:3 %}
+                    </div></div><div class="row"><div class="col-12"><hr/></div>
+                {% else %}
+
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>           
+{% endblock %}    
